@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pymongo import MongoClient
@@ -9,13 +8,13 @@ import datetime
 app = Flask(__name__)
 CORS(app)
 
-# Cấu hình MongoDB
+# Configure MongoDB
 client = MongoClient('mongodb://localhost:27017/')
 db = client['login_db']
 users = db['users']
 
-# Khóa bí mật cho JWT
-SECRET_KEY = 'your-secret-key'
+# Secret key
+SECRET_KEY = 'Ancutbokho01'
 
 
 @app.route('/api/register', methods=['POST'])

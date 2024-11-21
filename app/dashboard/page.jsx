@@ -8,7 +8,6 @@ export default function Dashboard() {
   const router = useRouter();
 
   useEffect(() => {
-    // Kiểm tra token khi component mount
     const token = localStorage.getItem("token");
     if (!token) {
       router.push("/auth");
